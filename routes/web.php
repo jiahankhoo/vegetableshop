@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 */
 
 //home
-Route::get("/",[productsController::class,'home']);
+Route::get("/home",[productsController::class,'home']);
 
 Route::post("/addcart/{product}",[productsController::class,'addcart'])->middleware("auth");
 
@@ -31,16 +31,16 @@ Route::delete("/{id}/cartdelete",[productsController::class,'delete']);
 
 
 
-//login 
-Route::get("/login",[UserController::class,'login'])->name("login");
+//login
+Route::get("/login",[productsController::class,'login'])->name("login");
 
-Route::post("/loginverify",[UserController::class,'loginverify']);
+Route::post("/loginverify",[productsController::class,'loginverify']);
 
-Route::get("/register",[UserController::class,'register']);
+Route::get("/register",[productsController::class,'register']);
 
-Route::post("/res_user",[UserController::class,'res_user']);
+Route::post("/res_user",[productsController::class,'res_user']);
 
-Route::post("/logout",[UserController::class,'destroy']);
+//Route::post("/logout",[productsController::class,'destroy']);
 
 
 
