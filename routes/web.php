@@ -32,15 +32,15 @@ Route::delete("/{id}/cartdelete",[productsController::class,'delete']);
 
 
 //login
-Route::get("/login",[productsController::class,'login'])->name("login");
+Route::get("/login",[productsController::class,'login']);
 
-Route::post("/loginverify",[productsController::class,'loginverify']);
+Route::post("/loginverify",[productsController::class,'loginverify'])->name("login");
 
 Route::get("/register",[productsController::class,'register']);
 
 Route::post("/res_user",[productsController::class,'res_user']);
 
-//Route::post("/logout",[productsController::class,'destroy']);
+Route::post("/logout",[productsController::class,'destroy']);
 
 
 

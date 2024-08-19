@@ -90,7 +90,7 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <form class="login-form" action="/loginverify" method="post">
+    <form class="login-form" action="{{ route('login') }}" method="post">
         @csrf
         <div class="form-group">
             <label for="username">Username:</label>
