@@ -12,7 +12,7 @@
 <title>Picked Fresh</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
-<meta name="author" content=""> 
+<meta name="author" content="">
 <!-- bootstrap css -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <!-- style css -->
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 <!-- Tweaks for older IEs-->
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!-- owl stylesheets --> 
+<!-- owl stylesheets -->
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 
 {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"> --}}
@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">MAIN SHOP</a>
+              <a class="nav-link" href="/home">MAIN SHOP</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/cartlist">CART @livewireStyles</a>
@@ -61,7 +61,7 @@
                   </form>
                 </li>
             @endauth
-            
+
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <div class="search_icon"><a href="#"><img src="images/search-icon.png"></a></div>
@@ -114,7 +114,7 @@
   <!-- sidebar -->
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/custom.js"></script>
-  <!-- javascript --> 
+  <!-- javascript -->
   {{-- <script src="js/owl.carousel.js"></script> --}}
   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
