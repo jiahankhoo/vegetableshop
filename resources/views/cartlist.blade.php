@@ -51,21 +51,21 @@ h2 {
   .col-4 {
     flex-basis: 25%;
   }
-  
+
   @media all and (max-width: 767px) {
     .table-header {
       display: none;
     }
     .table-row{
-      
+
     }
     li {
       display: block;
     }
     .col {
-      
+
       flex-basis: 100%;
-      
+
     }
     .col {
       display: flex;
@@ -99,8 +99,8 @@ h2 {
                             <div class="col col-2" data-label="Quantity">{{ $cart->qty }}</div>
                             <div class="col col-3" data-label="Amount">${{ $cart->price }}</div>
                             <div class="col col-1" data-label="status">
-                                
-                                <form action="/{{ $cart->newid }}/cartdelete" method="POST">
+
+                                <form action="{{ route('delete',$cart->id) }}" method="POST">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit"  >Delete</button>
@@ -120,7 +120,7 @@ h2 {
                             </div>
                         </li>
                     @else
-                    
+
                     <div class="col">
                         <p class="tempor_text">No Product found</p>
                     </div>
@@ -129,5 +129,5 @@ h2 {
         </div>
     </div>
 </div>
-    
+
 @endsection

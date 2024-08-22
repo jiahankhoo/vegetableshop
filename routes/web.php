@@ -27,7 +27,7 @@ Route::get("/cartlist",[productsController::class,'cartlist']);
 
 Route::put("/checkout/{cartid}",[productsController::class,'checkout']);
 
-Route::delete("/{id}/cartdelete",[productsController::class,'delete']);
+Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('delete');
 
 
 
