@@ -97,7 +97,7 @@ h2 {
                         <li class="table-row">
                             <div class="col col-4" data-label="Product Name">{{ $cart->p_name }}</div>
                             <div class="col col-2" data-label="Quantity">{{ $cart->qty }}</div>
-                            <div class="col col-3" data-label="Amount">${{ $cart->price }}</div>
+                            <div class="col col-3" data-label="Amount">${{ $cart->price*$cart->qty }}</div>
                             <div class="col col-1" data-label="status">
 
                                 <form action="{{ route('delete',$cart->id) }}" method="POST">

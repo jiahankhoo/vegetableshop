@@ -23,7 +23,7 @@ Route::post("/addcart/{product}",[productsController::class,'addcart'])->middlew
 
 
 //cart
-Route::get("/cartlist",[productsController::class,'cartlist']);
+Route::get("/cartlist",[productsController::class,'cartlist'])->name("cartlist");
 
 Route::put("/checkout/{cartid}",[productsController::class,'checkout']);
 
