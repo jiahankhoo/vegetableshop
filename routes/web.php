@@ -41,6 +41,7 @@ Route::get("/register",[productsController::class,'register']);
 Route::post("/res_user",[productsController::class,'res_user']);
 
 Route::post("/logout",[productsController::class,'destroy']);
+Route::post("/checkout",[productsController::class,'checkout']);
 
 
 

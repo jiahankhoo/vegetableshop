@@ -53,13 +53,21 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">CONTACT US</a>
             </li>
+
+
             @auth
                 <li class="nav-item">
                   <form action="/logout" method="POST">
                     @csrf
-                    <button type="submit" class="nav-link"  >Logout</button>
+                    <button type="submit" class="nav-link" >Logout</button>
                   </form>
                 </li>
+
+                @else
+
+                <a href="/login"class="nav-link" >login</a>
+
+
             @endauth
 
           </ul>
