@@ -32,9 +32,9 @@ Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('de
 
 
 //login
-Route::get("/login",[productsController::class,'login']);
+Route::get("/login",[productsController::class,'login'])->name("login");
 
-Route::post("/loginverify",[productsController::class,'loginverify'])->name("login");
+Route::post("/loginverify",[productsController::class,'loginverify'])->name("loginpage");
 
 Route::get("/register",[productsController::class,'register']);
 
