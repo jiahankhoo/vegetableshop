@@ -5,9 +5,10 @@
         font-family: 'lato', sans-serif;
     }
     .container {
+        width: 100%;
         max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+
+
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -22,7 +23,7 @@
     }
 
     .responsive-table {
-        li {
+        li{
             border-radius: 3px;
             padding: 25px 30px;
             display: flex;
@@ -78,13 +79,13 @@
 </style>
 <div class="vegetables_section layout_padding">
     <div class="container">
-        <div class="vegetables_section_2 layout_padding">
-            <div class="row">
+        <div class="vegetables_section_1 layout_padding">
+            <div class="row" style="display: block;">
                 @unless(count($carts)==0)
                 <form action="/checkout" method="POST">
                     @csrf
                     @method("PUT")
-                    <ul class="responsive-table" style="width:100%">
+                    <ul class="responsive-table">
                         <li class="table-header">
                             <div class="col col-1">Select</div>
                             <div class="col col-4">Product Name</div>
