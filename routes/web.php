@@ -29,6 +29,8 @@ Route::put("/checkout/{cartid}",[productsController::class,'checkout']);
 
 Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('delete');
 
+Route::post('/checkbox', [productsController::class, 'checkout'])->name("checkbox");
+
 
 
 //login
@@ -41,7 +43,8 @@ Route::get("/register",[productsController::class,'register']);
 Route::post("/res_user",[productsController::class,'res_user']);
 
 Route::post("/logout",[productsController::class,'destroy']);
-Route::post("/checkout",[productsController::class,'checkout']);
+
+
 
 
 

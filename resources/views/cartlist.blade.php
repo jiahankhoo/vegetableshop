@@ -82,9 +82,9 @@
         <div class="vegetables_section_1 layout_padding">
             <div class="row" style="display: block;">
                 @unless(count($carts)==0)
-                <form action="/checkout" method="POST">
+                <form action="{{ route('checkbox') }}" method="POST">
                     @csrf
-                    @method("PUT")
+                    {{-- @method("PUT") --}}
                     <ul class="responsive-table">
                         <li class="table-header">
                             <div class="col col-1">Select</div>
@@ -102,13 +102,14 @@
                             <div class="col col-2" data-label="Quantity">{{ $cart->qty }}</div>
                             <div class="col col-3" data-label="Amount">${{ $cart->price*$cart->qty }}</div>
                             <div class="col col-1" data-label="Remove">
-                                <form action="{{ route('delete', $cart->id) }}" method="POST">
-                                    @csrf
-                                    @method("DELETE")
-                                    <button type="submit">Delete</button>
-                                </form>
+                                <!-- Remove the form and replace it with a button -->
+                                <button form="remove-form-{{ $cart->id }}" type="submit">Delete</button>
                             </div>
                         </li>
+                        {{-- <form id="remove-form-{{ $cart->id }}" action="{{ route('delete', $cart->id) }}" method="POST">
+                            @csrf
+                            @method("DELETE")
+                        </form> --}}
                         @endforeach
                         <li class="table-row">
                             <div class="col col-7">Total Amount</div>
@@ -119,6 +120,7 @@
                         </li>
                     </ul>
                 </form>
+
                 @else
                 <div class="col">
                     <p class="tempor_text">No Product found</p>
