@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\cart_ids;
 use App\Models\carts;
-use App\Models\products;
+use App\Models\product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -72,7 +72,7 @@ class ProductsController extends Controller
 
     public function home()
     {
-        $products = products::all();
+        $products = product::all();
         return view('index', compact('products'));
     }
 
@@ -103,7 +103,7 @@ class ProductsController extends Controller
         return view('cartlist', ['carts' => $carts, 'total_price' => $total_price]);
     }
 
-    public function addcart(Request $request, products $product)
+    public function addcart(Request $request, product $product)
     {
         $userId = Auth::id();
 
