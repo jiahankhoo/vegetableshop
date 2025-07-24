@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 */
 
 //home
-Route::get("/home",[productsController::class,'home']);
+Route::get("/",[productsController::class,'home']);
 
 Route::post("/addcart/{product}",[productsController::class,'addcart'])->middleware("auth");
 
