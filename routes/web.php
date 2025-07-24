@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\products;
-use App\http\Controllers\productsController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -17,32 +17,32 @@ use App\Http\Controllers\UserController;
 */
 
 //home
-Route::get("/",[productsController::class,'home']);
+Route::get("/",[ProductsController::class,'home']);
 
-Route::post("/addcart/{product}",[productsController::class,'addcart'])->middleware("auth");
+Route::post("/addcart/{product}",[ProductsController::class,'addcart'])->middleware("auth");
 
 
 //cart
-Route::get("/cartlist",[productsController::class,'cartlist'])->name("cartlist")->middleware("auth");
+Route::get("/cartlist",[ProductsController::class,'cartlist'])->name("cartlist")->middleware("auth");
 
-Route::put("/checkout/{cartid}",[productsController::class,'checkout'])->middleware("auth");
+Route::put("/checkout/{cartid}",[ProductsController::class,'checkout'])->middleware("auth");
 
-Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('delete')->middleware("auth");
+Route::delete("/{id}/cartdelete",[ProductsController::class,'delete'])->name('delete')->middleware("auth");
 
-Route::post('/checkbox', [productsController::class, 'checkout'])->name("checkbox")->middleware("auth");
+Route::post('/checkbox', [ProductsController::class, 'checkout'])->name("checkbox")->middleware("auth");
 
 
 
 //login
-Route::get("/login",[productsController::class,'login'])->name("login");
+Route::get("/login",[ProductsController::class,'login'])->name("login");
 
-Route::post("/loginverify",[productsController::class,'loginverify'])->name("loginpage");
+Route::post("/loginverify",[ProductsController::class,'loginverify'])->name("loginpage");
 
-Route::get("/register",[productsController::class,'register']);
+Route::get("/register",[ProductsController::class,'register']);
 
-Route::post("/res_user",[productsController::class,'res_user']);
+Route::post("/res_user",[ProductsController::class,'res_user']);
 
-Route::post("/logout",[productsController::class,'destroy']);
+Route::post("/logout",[ProductsController::class,'destroy']);
 
 
 

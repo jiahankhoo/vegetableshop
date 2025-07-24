@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
-class productsController extends Controller
+class ProductsController extends Controller
 {
     public function res_user(Request $request)
     {
