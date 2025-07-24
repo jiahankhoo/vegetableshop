@@ -17,19 +17,19 @@ use App\Http\Controllers\UserController;
 */
 
 //home
-Route::get("/",[productsController::class,'home'])->name('index');
+Route::get("/home",[productsController::class,'home']);
 
 Route::post("/addcart/{product}",[productsController::class,'addcart'])->middleware("auth");
 
 
 //cart
-Route::get("/cartlist",[productsController::class,'cartlist'])->name("cartlist");
+Route::get("/cartlist",[productsController::class,'cartlist'])->name("cartlist")->middleware("auth");
 
-Route::put("/checkout/{cartid}",[productsController::class,'checkout']);
+Route::put("/checkout/{cartid}",[productsController::class,'checkout'])->middleware("auth");
 
-Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('delete');
+Route::delete("/{id}/cartdelete",[productsController::class,'delete'])->name('delete')->middleware("auth");
 
-Route::post('/checkbox', [productsController::class, 'checkout'])->name("checkbox");
+Route::post('/checkbox', [productsController::class, 'checkout'])->name("checkbox")->middleware("auth");
 
 
 
