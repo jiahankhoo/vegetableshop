@@ -103,7 +103,7 @@ class ProductsController extends Controller
         return view('cartlist', ['carts' => $carts, 'total_price' => $total_price]);
     }
 
-    public function addcart(Request $request, Product $product)
+    public function addcart(Request $request, products $product)
     {
         $userId = Auth::id();
 
