@@ -93,7 +93,7 @@
     <form class="login-form" action="{{ route('loginpage') }}" method="post">
         @csrf
         <div class="form-group">
-            <label for="username">Username:</label>
+            <label for="username">Email:</label>
             <input type="text" id="username" name="email" value="{{ old('email') }}" required>
             @error("email")
                 <p>{{ $message }}</p>

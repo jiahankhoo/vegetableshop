@@ -2,7 +2,7 @@
 @section('content')
 <div class="vegetables_section layout_padding">
     <div class="container">
-        <div class="image_2"><img src="images/img-2.png" alt="Vegetables Image"></div>
+        <div class="image_2"><img src="images/img-1.png" alt="Vegetables Image"></div>
         <h1 class="about_taital">Our Vegetables</h1>
         <p class="lorem_text">Readers may be distracted by the readable content of a page.</p>
 
@@ -12,7 +12,7 @@
                 <div class="col-md-3">
                     <div class="box_section">
                         <div class="image_4">
-                            <img src="images/img-4.png" alt="{{ $product->name }}">
+                            <img src="{{ asset($product->p_image) }}" alt="{{ $product->name }}">
                         </div>
                         <h2 class="dolor_text">
                             $<span style="color: #ebc30a;">{{ $product->p_price }}</span>

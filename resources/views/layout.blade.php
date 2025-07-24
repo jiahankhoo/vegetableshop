@@ -48,7 +48,7 @@
               <a class="nav-link" href="/cartlist">CART @livewireStyles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">ABOUT</a>
+              <a class="nav-link" href="/orderlist">ORDERLIST</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">CONTACT US</a>
@@ -82,7 +82,7 @@
   @yield('content')
   <x-flash-message />
 
-  <!--footer section start -->
+  {{-- <!--footer section start -->
   <div class="footer_section layout_padding">
     <div class="container">
       <div class="row">
@@ -112,7 +112,7 @@
   <div class="copyright_section">
     <p class="copyright_text">Copyright 2023 All Right Reserved <a href="https://html.design">Free html  Templates</a></p>
   </div>
-  <!--copyright section end -->
+  <!--copyright section end --> --}}
   <!-- Javascript files-->
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
